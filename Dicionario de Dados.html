@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Dados</title>
+</head>
+<body>
+
+    <h1>Dicionário de Dados Conceitual</h1>
+
+    <p> Os exemplos de valores abaixo são fictícios, usados apenas para 
+        ilustrar o tipo de dado.</p>
+
+    <h2>PACIENTE</h2>
+
+    <p>
+        PACIENTE = id_paciente + nome_completo + data_nascimento + sexo
+        + cpf + rg + profissao + estado_civil + endereco + telefone
+        + email + responsavel_legal + historico_saude + data_cadastro
+    </p>
+
+    <!--TABELA PACIENTE-->
+    <table border="2">
+        <tr>
+            <th>Atributo</th>
+            <th>Tipo físico</th>
+            <th>Obrigatório</th>
+            <th>Significado e relevância</th>
+        </tr>
+
+        <tr>
+            <td>id_paciente</td>
+            <td>integer</td>
+            <td>Sim (PK)</td>
+            <td>Identificador único do paciente.</td>
+        </tr>
+
+        <tr>
+            <td>nome_completo</td>
+            <td>varchar(150)</td>
+            <td>Sim</td>
+            <td>Nome completo do paciente.</td>
+        </tr>
+
+        <tr>
+            <td>data_nascimento</td>
+            <td>date</td>
+            <td>Sim</td>
+            <td>Data de nascimento do paciente.</td>
+        </tr>
+
+        <tr>
+            <td>sexo</td>
+            <td>varchar(30)</td>
+            <td>Sim</td>
+            <td>Sexo registrado no cadastro do paciente.</td>
+        </tr>
+
+    </table>
+
+
+    <h2>DENTISTA</h2>
+
+    <p>
+        DENTISTA = id_dentista + nome + cro + especialidade + telefone
+    </p>
+    <!--TABELA DENTISTA-->
+    <table border="2"  >
+        <tr>
+            <th>Atributo</th>
+            <th>Tipo físico</th>
+            <th>Obrigatório</th>
+            <th>Significado e relevância</th>
+        </tr>
+
+        <tr>
+            <td>id_dentista</td>
+            <td>integer</td>
+            <td>Sim (PK)</td>
+            <td>Identificador único do dentista.</td>
+        </tr>
+
+        <tr>
+            <td>nome</td>
+            <td>varchar(120)</td>
+            <td>Sim</td>
+            <td>Nome completo do dentista.</td>
+        </tr>
+
+        <tr>
+            <td>cro</td>
+            <td>varchar(20)</td>
+            <td>Sim</td>
+            <td>Número de registro profissional no CRO.</td>
+        </tr>
+
+        <tr>
+            <td>especialidade</td>
+            <td>varchar(80)</td>
+            <td>Sim</td>
+            <td>Especialidade do dentista.</td>
+        </tr>
+
+        <tr>
+            <td>telefone</td>
+            <td>varchar(20)</td>
+            <td>Não</td>
+            <td>Telefone de contato profissional.</td>
+        </tr>
+
+    </table>
+
+
+    <h2>CONSULTA</h2>
+
+    <p>
+        CONSULTA = id_consulta + id_paciente + id_dentista + data
+        + horario + status + procedimento + observacoes + tipo_pagamento
+    </p>
+    <!--TABELA CONSULTA-->
+    <table border="2">
+        <tr>
+            <th>Atributo</th>
+            <th>Tipo físico</th>
+            <th>Obrigatório</th>
+            <th>Significado e relevância</th>
+        </tr>
+
+        <tr>
+            <td>id_consulta</td>
+            <td>integer</td>
+            <td>Sim (PK)</td>
+            <td>Identificador único da consulta.</td>
+        </tr>
+
+        <tr>
+            <td>id_paciente</td>
+            <td>integer</td>
+            <td>Sim (FK)</td>
+            <td>Paciente vinculado à consulta.</td>
+        </tr>
+
+        <tr>
+            <td>id_dentista</td>
+            <td>integer</td>
+            <td>Sim (FK)</td>
+            <td>Dentista responsável pela consulta.</td>
+        </tr>
+
+        <tr>
+            <td>data</td>
+            <td>date</td>
+            <td>Sim</td>
+            <td>Data marcada para a consulta.</td>
+        </tr>
+
+        <tr>
+            <td>horario</td>
+            <td>time</td>
+            <td>Sim</td>
+            <td>Horário marcado para a consulta.</td>
+        </tr>
+
+        <tr>
+            <td>status</td>
+            <td>varchar(30)</td>
+            <td>Sim</td>
+            <td>Situação atual da consulta.</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
